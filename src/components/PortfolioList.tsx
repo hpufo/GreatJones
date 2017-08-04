@@ -6,6 +6,7 @@ export default class PortfolioList extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
+      error: false,
       startIndex: 0,
       currentPage: 0,
       results: []
@@ -21,9 +22,20 @@ export default class PortfolioList extends React.Component<any, any> {
             currentPage: 1
         });
     })
-    .catch();
+    .catch((error) => {
+      this.setState({
+        error: true
+      });
+    });
   }
   renderItems() {
+      if (this.state.results.length === 0) {
+        if (this.state.error) {
+          return <tr><td rowSpan={6}>API call failed</td></tr>;
+        }
+        //If there is no error display that you are loading
+        return <tr><td rowSpan={6}>Loading</td></tr>;
+      }
       const output = this.state.results.filter((item: any, i: any) => {
           return i >= this.state.startIndex && i <= this.state.startIndex + 10;
       });

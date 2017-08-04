@@ -5,7 +5,7 @@ var rules = require('./rules');
 
 module.exports = {
   entry: {
-    index: './src/'
+    index: './src/js/'
   },
   output: {
     filename: '[name].bundle.js',

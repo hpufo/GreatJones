@@ -40,7 +40,7 @@ export default class PortfolioList extends React.Component<any, any> {
           return i >= this.state.startIndex && i <= this.state.startIndex + 10;
       });
       return output.map((item: any, i: any) => {
-          return <PortfolioItem obj={item} key={i} />;
+          return <PortfolioItem item={item} key={i} />;
       });
   }
   handleClick = (event: any) => {

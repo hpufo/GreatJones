@@ -30,10 +30,16 @@ module.exports = {
     exclude: /node_modules/
   },
 
-  //For css
-  cssLoader: {
-    test: /\.css$/,
-    loader: 'style-loader!css-loader'
+  //For scss
+  scssLoader: {
+    test: /\.scss$/,
+    use: [{
+      loader: "style-loader"
+    },{
+      loader: "css-loader"
+    },{
+      loader: "sass-loader"
+    }]
   },
   // for karma tests
   istanbulInstrumenterLoader: {

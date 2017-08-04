@@ -16,6 +16,7 @@ module.exports = {
   },
   module: {
     rules: [
+      rules.cssLoader,
       rules.awesomeTypeScriptLoader,
       rules.sourceMapLoader
     ]

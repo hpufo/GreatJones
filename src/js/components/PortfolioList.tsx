@@ -33,7 +33,7 @@ export default class PortfolioList extends React.Component<any, any> {
         if (this.state.error) {
           return <tr><td rowSpan={6}>API call failed</td></tr>;
         }
-        //If there is no error display that you are loading
+        // If there is no error display that you are loading
         return <tr><td rowSpan={6}>Loading</td></tr>;
       }
       const output = this.state.results.filter((item: any, i: any) => {
@@ -80,7 +80,7 @@ export default class PortfolioList extends React.Component<any, any> {
       <div>
         <table>
           <thead>
-            <tr>
+            <tr className='tableHeadRow'>
               <th>ID</th>
               <th>Abbreviation</th>
               <th>Active</th>

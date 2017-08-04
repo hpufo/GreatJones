@@ -13,12 +13,12 @@ export default class PortfolioItem extends React.Component<any, any> {
     } = this.props.item;
     return (
       <tr className='.item'>
-        <td>{ID}</td>
-        <td>{abbreviation}</td>
-        <td>{active}</td>
-        <td>{managementCompany}</td>
-        <td>{name}</td>
-        <td>{targetOperatingReserve}</td>
+        <td className='id' >{ID}</td>
+        <td className='abv' >{abbreviation}</td>
+        <td className='active' >{active}</td>
+        <td className='manComp' >{managementCompany}</td>
+        <td className='name' >{name}</td>
+        <td className='tor' >{targetOperatingReserve}</td>
       </tr>
     );
   }

@@ -30,6 +30,11 @@ module.exports = {
     exclude: /node_modules/
   },
 
+  //For css
+  cssLoader: {
+    test: /\.css$/,
+    loader: 'style-loader!css-loader'
+  },
   // for karma tests
   istanbulInstrumenterLoader: {
     // Based on https://git.io/vHNuc (marcules/karma-remap-istanbul),

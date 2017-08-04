@@ -3,15 +3,7 @@ import { shallow } from 'enzyme';
 import Layout from '../../src/js/components/Layout';
 
 describe('Layout', () => {
-  it('simple test', () => {
-    expect(0).toBe(0);
+  it('renders the header', () => {
+    expect(shallow(<Layout />).find('h1').exists()).toBe(true);
   });
-
-  it('simple shallow rendering', () => {
-    expect(shallow(<Layout />).find('.layout').length).toBe(1);
-  });
-/*
-  it('contains # items initally', () => {
-    expect(mount(<Layout />).find('.layout').length).toBe(2);
-  });//*/
 });

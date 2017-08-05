@@ -13,6 +13,7 @@ export default class PortfolioList extends React.Component<any, any> {
     };
   }
   componentWillMount() {
+    // API call using axios
     axios.post('https://greatapi.azurewebsites.net/api/PwProxy', {
       path: ['getPortfolioList']
     })
@@ -30,23 +31,27 @@ export default class PortfolioList extends React.Component<any, any> {
   }
   renderItems() {
       if (this.state.results.length === 0) {
+        // If the API call failed
         if (this.state.error) {
+          // return an error message
           return (
             <tr>
               <td className='errMsg' rowSpan={6}>API call failed</td>
             </tr>
           );
         }
-        // If there is no error display that you are loading
+        // If there is no error display then you are loading
         return (
         <tr>
           <td className='loading' rowSpan={6}>Loading</td>
         </tr>
       );
       }
+      // Gets the up to 10 rows to output
       const output = this.state.results.filter((item: any, i: number) => {
           return i >= this.state.startIndex && i <= this.state.startIndex + 10;
       });
+      // returns the rows to render
       return output.map((item: any, i: number) => {
           return <PortfolioItem item={item} key={i} />;
       });

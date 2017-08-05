@@ -2,3 +2,44 @@
   padding: 0;
   margin: 0;
 }
+
+.layout{
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeadRow{
+  background-color: #86898e;
+}
+
+h1{
+  display: flex;
+  justify-content: center; 
+}
+table{
+  width: 100%;
+  //border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td{
+  text-align: center;
+  padding: 0 1%;
+}
+
+.pagination, .buttons{
+  float: right;
+}
+
+input[type=button]{
+  padding: 10px;
+  font-size: large;
+}
+
+tr{
+  &:nth-child(even){
+    background-color: lightgrey;
+  }
+}

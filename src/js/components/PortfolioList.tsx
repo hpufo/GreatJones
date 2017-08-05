@@ -104,8 +104,18 @@ export default class PortfolioList extends React.Component<any, any> {
         <div className='pagination'>
           {this.pagination()}
           <div className='buttons'>
-            <input type='button' value='<' onClick={this.handleClick} />
-            <input type='button' value='>' onClick={this.handleClick} />
+            <input
+              type='button'
+              value='<'
+              className='back'
+              onClick={this.handleClick}
+            />
+            <input
+              type='button'
+              value='>'
+              className='fwd'
+              onClick={this.handleClick}
+            />
           </div>
         </div>
       </div>

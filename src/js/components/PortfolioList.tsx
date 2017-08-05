@@ -31,15 +31,23 @@ export default class PortfolioList extends React.Component<any, any> {
   renderItems() {
       if (this.state.results.length === 0) {
         if (this.state.error) {
-          return <tr><td rowSpan={6}>API call failed</td></tr>;
+          return (
+            <tr>
+              <td className='errMsg' rowSpan={6}>API call failed</td>
+            </tr>
+          );
         }
         // If there is no error display that you are loading
-        return <tr><td rowSpan={6}>Loading</td></tr>;
+        return (
+        <tr>
+          <td className='loading' rowSpan={6}>Loading</td>
+        </tr>
+      );
       }
-      const output = this.state.results.filter((item: any, i: any) => {
+      const output = this.state.results.filter((item: any, i: number) => {
           return i >= this.state.startIndex && i <= this.state.startIndex + 10;
       });
-      return output.map((item: any, i: any) => {
+      return output.map((item: any, i: number) => {
           return <PortfolioItem item={item} key={i} />;
       });
   }

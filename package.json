@@ -1,5 +1,5 @@
 {
-  "name": "ts-react-boilerplate",
+  "name": "great-jones",
   "version": "1.0.0",
   "description": "target: typescript 2, webpack 2 + hot-reload, karma + jasmine",
   "main": "./dist/index.bundle.js",
@@ -13,15 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sotnikov-link/ts-react-boilerplate.git"
+    "url": "git+https://github.com/hpufo/GreatJones.git"
   },
   "keywords": [],
-  "author": "Valeriy Sotnikov <sotnikov.link@mail.ru> (http://sotnikov.link)",
+  "author": "Chris Stephenson",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/sotnikov-link/ts-react-boilerplate/issues"
   },
-  "homepage": "https://github.com/sotnikov-link/ts-react-boilerplate#readme",
   "devDependencies": {
     "@types/enzyme": "^2.8.4",
     "@types/jasmine": "^2.5.52",
